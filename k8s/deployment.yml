@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-data-consumer-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-data-consumer
+  template:
+    metadata:
+      labels:
+        app: app-data-consumer
+    spec:
+      containers:
+        - name: app-data-consumer-container
+          image: ${IMAGE_NAME}:${IMAGE_TAG::7}
+          ports:
+            - containerPort: 8080
