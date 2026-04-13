@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication(scanBasePackages = "com.rideshare.analytics")
-public class App 
+public class AppDataConsumer
 {
     public static void main(String[] args )
     {
-        SpringApplication.run(App.class, args);
+        SpringApplication.run(AppDataConsumer.class, args);
     }
 }
